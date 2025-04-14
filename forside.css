@@ -63,7 +63,7 @@
     padding: 12px 24px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5;
+    border-radius: 5px;
     background-color: #F1E9DE; /* button background color */
 
 }
@@ -71,8 +71,8 @@
 .btn.light {
     color: #A4976B; /* text color for light button */
     background-color: #F1E9DE; /* light button background color */
-    font-family: "Sweet Sans Pro";
-    font-size: 20px;
+    font-family: "Sweet Sans Pro Light";
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
 
@@ -81,8 +81,8 @@
 .btn.dark {
     color: #F1E9DE; /* text color for dark button */
     background-color: #A4976B; /* dark button background color */
-    font-family: "Sweet Sans Pro";
-    font-size: 20px;
+    font-family: "Sweet Sans Pro Light";
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
 
@@ -102,7 +102,7 @@
 
 .section2 { 
     background-color: #8A5E2D; /* background color for section 2 */
-    height: 70vh; /* full height of the viewport */
+    height: 70vh; 
     width: 100%; 
     padding: 60px 30px;;
 }
@@ -116,7 +116,6 @@
     margin: 0 auto; /* center the container */
     
 }
-
 
 
 .section2-image {
@@ -134,3 +133,32 @@
     height: auto; /* maintain aspect ratio */
     object-fit: cover; /* cover the container */
 }
+
+/* Section 3 */
+
+.section3 { 
+    background-color: #F1E9DE; 
+    height: 90vh; 
+    width: 100%; 
+    padding: 60px 30px;;
+}
+
+/* row-images */
+
+.image-row {
+    display: flex;
+    gap: 20px; /* Space between images */
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0; /* Space between the text and images */
+    overflow-x: auto; /* horizontal scroll */
+    scroll-snap-type: x mandatory;  /* Optional: snaps to each image */
+  }
+  
+  .image-row img {
+    width: 20%;  /* or use % if you want responsiveness */
+    height: 350px;
+    flex: 0 0 auto;         
+    /* scroll-snap-align: start; Snaps to start of image */
+
+  }
