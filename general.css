@@ -1,0 +1,42 @@
+
+!-- Fonts & Styles --!
+
+body {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+section1 {
+    position: relative;
+    margin:0; 
+    z-index: -1;
+    width: auto;
+    margin-top: calc(70px); /* det samme som header height */
+    }
+
+    h1 {
+        font-family: "Shippori Mincho", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-size:64px;
+        text-align: center;
+        font-style: normal;
+        text-decoration: none;
+        color:#F1E9DE; 
+    }
+
+    h2 {
+        font-family: "Shippori Mincho", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-size:24px;
+        text-align: center;
+        font-style: normal;
+        text-decoration: none;
+        color:#F1E9DE;
+    }
+    
