@@ -15,7 +15,7 @@ section1 {
     margin:0; 
     z-index: -1;
     width: auto;
-    margin-top: calc(70px); /* det samme som header height */
+
     }
 
     h1 {
@@ -23,7 +23,6 @@ section1 {
         font-optical-sizing: auto;
         font-weight: 600;
         font-size:64px;
-        text-align: center;
         font-style: normal;
         text-decoration: none;
         color:#F1E9DE; 
@@ -33,10 +32,19 @@ section1 {
         font-family: "Shippori Mincho", sans-serif;
         font-optical-sizing: auto;
         font-weight: 600;
-        font-size:24px;
+        font-size:20px;
         text-align: center;
         font-style: normal;
         text-decoration: none;
         color:#F1E9DE;
+    }
+
+    p {
+        font-family: "Sweet Sans Pro Light", sans-serif;
+        font-size: 20px;
+        color:#F1E9DE;
+        font-weight: 300;
+        font-style: normal;
+
     }
     
