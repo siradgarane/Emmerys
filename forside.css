@@ -104,34 +104,42 @@
     background-color: #8A5E2D; /* background color for section 2 */
     height: 70vh; 
     width: 100%; 
-    padding: 60px 30px;;
+    padding: 60px 30px; 
+
 }
 
 .container-section2 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     max-width: 1200px; /* max width of the container */
     height: 100%; /* full height of the container */
     margin: 0 auto; /* center the container */
-    
+    display: flex;
+    flex-direction: row; /* added to align children in a row */
+    align-items: center; 
+    justify-content: space-between; /* added to distribute space between children */
+
+}
+
+.velkommen {
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
 }
 
 
 .section2-image {
     display: flex;
     flex-direction: row;
-    position: absolute;
-    flex: 1;
-    min-width: 300px; /* minimum width of the image */
- 
+    align-items: center;
+    justify-content: center;
+
 }
 
 .section2-image img {
-    width: 50%; 
-    align-items: right;
+    width: 400px;
     height: auto; /* maintain aspect ratio */
-    object-fit: cover; /* cover the container */
+
 }
 
 /* Section 3 */
@@ -140,7 +148,7 @@
     background-color: #F1E9DE; 
     height: 90vh; 
     width: 100%; 
-    padding: 60px 30px;;
+    padding: 60px 40px;;
 }
 
 /* row-images */
@@ -159,6 +167,5 @@
     width: 20%;  /* or use % if you want responsiveness */
     height: 350px;
     flex: 0 0 auto;         
-    /* scroll-snap-align: start; Snaps to start of image */
-
+    scroll-snap-align: start; 
   }
