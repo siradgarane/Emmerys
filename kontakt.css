@@ -1,0 +1,16 @@
+
+.kontakt { 
+    background-color: #8A5E2D; /* background color for section 2 */
+    height: 100vh; 
+    width: 100%; 
+    padding: 60px 30px; 
+
+}
+
+.container1 {
+    width: auto; 
+    height: auto; 
+    margin: 0 auto; /* center the container */
+    display: flex;
+    flex-direction: column;
+}
