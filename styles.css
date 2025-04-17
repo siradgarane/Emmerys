@@ -1,0 +1,384 @@
+/* styles.css */
+
+/* Generelle stilarter */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sweet Sans Pro", sans-serif;
+}
+
+body {
+  background-color: #f5f3eb; /* Lys baggrundsfarve */
+  color: #3a3f2a; /* Mørk grønbrun tekst */
+}
+
+/* Farver fra styletile */
+:root {
+  --primary-color: #a8a68a; /* Lys grønbrun */
+  --secondary-color: #6b4e31; /* Brun */
+  --dark-color: #3a3f2a; /* Mørk grønbrun */
+}
+
+/* Header og navigation */
+header {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: center; /* Centrerer indholdet */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 40px; /* Juster højden efter dit logo */
+  position: absolute;
+  left: 1rem;
+}
+
+/* Burgermenu med CSS checkbox-hack */
+.burger-toggle {
+  display: none;
+}
+
+.burger-label {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--dark-color);
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a.active {
+  color: var(--secondary-color);
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* Tilmeld-knap i navigationen */
+.nav-links .tilmeld-btn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links .tilmeld-btn:hover {
+  background-color: var(--dark-color);
+}
+
+/* Burgermenu til mobil */
+@media (max-width: 768px) {
+  .logo img {
+    position: static;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  .burger-label {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .burger-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .nav-links .tilmeld-btn {
+    width: fit-content;
+    align-self: center;
+  }
+}
+
+/* Generelle sektioner */
+section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: "Sweet Sans Pro", sans-serif;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  color: var(--dark-color);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+button,
+.btn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--dark-color);
+}
+
+/* Velkomstsektion (Find Emmerys) */
+.welcome-section {
+  background-color: #f5f3eb;
+  padding: 3rem 1rem;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.welcome-section h1 {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+  color: var(--dark-color);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-section .btn-find {
+  background-color: var(--secondary-color);
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.welcome-section .btn-udforsk {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+/* Find-sektion (Find Emmerys) */
+.find-section {
+  background-color: var(--dark-color);
+  padding: 3rem 1rem;
+  color: #fff;
+  text-align: left;
+}
+
+.find-section h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.find-section p {
+  color: #fff;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.find-section .locations-map {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.find-section .locations {
+  flex: 1;
+}
+
+.find-section .location {
+  margin-bottom: 2rem;
+}
+
+.find-section .location h3 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.find-section .location p {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.find-section .location .btn-find {
+  background-color: var(--secondary-color);
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.find-section .location .learn-more {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.find-section .location .learn-more:hover {
+  color: #fff;
+}
+
+.find-section .map {
+  flex: 1;
+  max-width: 50%;
+}
+
+.find-section .map img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  text-align: center;
+  color: var(--dark-color);
+}
+
+footer .links {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: var(--dark-color);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+footer a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: var(--secondary-color);
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--secondary-color);
+}
+
+footer a:hover::after {
+  width: 100%;
+}
+
+footer .copyright {
+  font-size: 0.9rem;
+  color: var(--dark-color);
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(58, 63, 42, 0.2);
+}
+
+/* Responsivitet */
+@media (max-width: 1024px) {
+  .find-section .locations-map {
+    flex-direction: column;
+  }
+
+  .find-section .map {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-section p {
+    font-size: 1rem;
+  }
+
+  .find-section h1 {
+    font-size: 2rem;
+  }
+
+  .find-section p {
+    font-size: 1rem;
+  }
+
+  footer .links a {
+    display: inline-block;
+    margin: 0.3rem 0.5rem;
+  }
+}
