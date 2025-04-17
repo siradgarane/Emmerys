@@ -1,5 +1,6 @@
+/* forside.css */
 
-
+/* Generelle stilarter */
 * {
     margin: 0;
     padding: 0;
@@ -7,26 +8,25 @@
 }
 
 /* Main image section */
-
 .section1 {
-    height: 100vh; /* full height of the viewport */
+    height: 100vh; /* Fuld højde af viewport */
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
 
 .container-section1 {
-    height: 100vh; /* height of the container */
-    width: 100%; /* full width of the container */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Sørger for, at indholdet stables lodret */
     justify-content: center;
     align-items: center;
     align-self: stretch;
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
-    padding-top: 200px; /* space between the text and the top of the container */
-
+    padding-top: 100px;
+    z-index: 1;
 }
 
 .image-container {
@@ -35,7 +35,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* hide overflow */
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent sort baggrund */
+   
 }
 
 .section1-image {
@@ -43,20 +45,24 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: auto;
-    height: auto;
-    z-index: -1; /* behind the text */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-/*Buttons*/
+.section1-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sørger for, at billedet dækker hele området */
+}
 
+/* Buttons */
 .buttons {
     display: flex;
     gap: 30px;
     justify-content: center;
     align-items: center;
-    margin-top: 30px; /* space between the text and buttons */
-
+    margin-top: 30px;
 }
 
 .btn {
@@ -64,59 +70,55 @@
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    background-color: #F1E9DE; /* button background color */
-
+    background-color: #F1E9DE;
 }
 
 .btn.light {
-    color: #A4976B; /* text color for light button */
-    background-color: #F1E9DE; /* light button background color */
-    font-family: "Sweet Sans Pro Light";
+    color: #A4976B;
+    background-color: #F1E9DE;
+    font-family: "Sweet Sans Pro Light", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-
 }
 
 .btn.dark {
-    color: #F1E9DE; /* text color for dark button */
-    background-color: #A4976B; /* dark button background color */
-    font-family: "Sweet Sans Pro Light";
+    color: #F1E9DE;
+    background-color: #A4976B;
+    font-family: "Sweet Sans Pro Light", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-
+    background: none;
+  color: F1E9DE;
+  border: 2px solid ;
 }
 
 .btn:hover {
-    opacity: 0.8; /* change opacity on hover */
+    opacity: 0.8;
 }
 
 .udforsk {
     display: flex;
-    padding-top: 30px; /* space between the text and buttons */
-
+    padding-top: 30px;
 }
 
 /* Section 2 */
-
 .section2 { 
-    background-color: #8A5E2D; /* background color for section 2 */
-    height: 70vh; 
-    width: 100%; 
-    padding: 60px 30px; 
-
+    background-color: #8A5E2D;
+    min-height: 70vh; /* Bruger min-height for fleksibilitet */
+    width: 100%;
+    padding: 60px 30px;
 }
 
 .container-section2 {
-    max-width: 1200px; /* max width of the container */
-    height: 100%; /* full height of the container */
-    margin: 0 auto; /* center the container */
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row; /* added to align children in a row */
-    align-items: center; 
-    justify-content: space-between; /* added to distribute space between children */
-
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .velkommen {
@@ -124,48 +126,184 @@
     height: auto;
     display: flex;
     flex-direction: column;
-
 }
-
 
 .section2-image {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
 }
 
 .section2-image img {
     width: 400px;
-    height: auto; /* maintain aspect ratio */
-
+    height: auto;
 }
 
 /* Section 3 */
-
 .section3 { 
-    background-color: #F1E9DE; 
-    height: 90vh; 
-    width: 100%; 
-    padding: 60px 40px;;
+    background-color: #F1E9DE;
+    min-height: 90vh;
+    width: 100%;
+    padding: 60px 40px;
 }
 
-/* row-images */
-
+/* Row-images */
 .image-row {
     display: flex;
-    gap: 20px; /* Space between images */
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    padding: 30px 0; /* Space between the text and images */
-    overflow-x: auto; /* horizontal scroll */
-    scroll-snap-type: x mandatory;  /* Optional: snaps to each image */
-  }
-  
-  .image-row img {
-    width: 20%;  /* or use % if you want responsiveness */
+    padding: 30px 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.image-row img {
+    width: 20%;
     height: 350px;
-    flex: 0 0 auto;         
-    scroll-snap-align: start; 
-  }
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    object-fit: cover; /* Sørger for, at billeder ikke forvrænges */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    /* Section 1 */
+    .section1 {
+        height: 80vh; /* Reducer højden lidt for mindre skærme */
+    }
+
+    .container-section1 {
+        height: 80vh;
+        padding-top: 80px;
+    
+    }
+
+    .container-section1 h1 {
+        font-size: 64px; /* Reducer tekststørrelse */
+    }
+
+    .container-section1 h2 {
+        font-size: 18px;
+    }
+
+    .buttons {
+        gap: 20px;
+    }
+
+    /* Section 2 */
+    .section2 {
+        min-height: auto; /* Fleksibel højde */
+        padding: 40px 20px;
+    }
+
+    .container-section2 {
+        flex-direction: column; /* Stak indholdet lodret */
+        gap: 2rem;
+    }
+
+    .velkommen {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section2-image img {
+        width: 300px; /* Reducer billedstørrelse */
+    }
+
+    /* Section 3 */
+    .section3 {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .image-row img {
+        width: 30%; /* Større billeder for at fylde pladsen bedre */
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Section 1 */
+    .section1 {
+        height: 70vh;
+    }
+
+    .container-section1 {
+        height: 70vh;
+        padding-top: 60px;
+    }
+
+    .container-section1 h1 {
+        font-size: 32px;
+    }
+
+    .container-section1 h2 {
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column; /* Stak knapper lodret */
+        gap: 15px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    /* Section 2 */
+    .section2 {
+        padding: 30px 15px;
+    }
+
+    .section2-image img {
+        width: 200px;
+    }
+
+    /* Section 3 */
+    .section3 {
+        padding: 30px 15px;
+    }
+
+    .image-row img {
+        width: 45%; /* Endnu større billeder for mobil */
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Section 1 */
+    .container-section1 {
+        padding-top: 40px;
+    }
+
+    .container-section1 h1 {
+        font-size: 28px;
+    }
+
+    .container-section1 h2 {
+        font-size: 14px;
+    }
+
+    /* Section 2 */
+    .section2 {
+        padding: 20px 10px;
+    }
+
+    .section2-image img {
+        width: 150px;
+    }
+
+    /* Section 3 */
+    .section3 {
+        padding: 20px 10px;
+    }
+
+    .image-row img {
+        width: 80%; /* Næsten fuld bredde for små skærme */
+        height: 150px;
+    }
+}
