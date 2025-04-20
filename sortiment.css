@@ -1,0 +1,154 @@
+
+
+
+/* SECTION 1 */
+.section-1-container {
+    display: flex;
+    justify-content: center;
+    background-image: url('images/sandwich.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section-1-div-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 50px; 
+    
+
+}
+
+.section-1-div-container p {
+    width:650px; 
+    height: 174px;
+    color:#F1E9DE; 
+}
+
+.section-1-div-container h1 {
+    width:400px;     
+    height: 174px;
+    color:#F1E9DE;
+    margin-top: 20px;
+}
+/* SECTION 2: MENUKORT */
+
+
+.section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8A5E2D; 
+    padding: 0; 
+    margin:0; 
+    gap:50px;
+   
+}
+
+.image {
+    width: 50%;
+    height: 900px;
+    max-width: 900px; 
+    margin: 0;; 
+    background-image: url('images/menukort-600px.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+.menukort-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: Left;
+    max-width: 900px; 
+    margin: 0 auto; 
+    width: 50%;
+}
+
+.menukort-text h1 {
+    color: #F1E9DE; 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+}
+.menukort-text p {
+    color: #F1E9DE; 
+    font-size: 1.2rem; 
+    line-height: 1.5; 
+    margin-bottom: 20px; 
+}
+
+/* SECTION 3: Productoversigt */ 
+
+.allergi-section {
+    background-color: #F1E9DE;
+    padding: 80px 30px;
+    text-align: center;
+    color: #6B4B31;
+}
+
+/* SECTION4: GRID */ 
+
+
+.section4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    
+  }
+
+  .section.reverse {
+    direction: rtl;
+  }
+
+  .section.reverse .text {
+    direction: ltr;
+  }
+
+
+.text {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .text h2 {
+    font-size: 2.5rem;
+    color: inherit;
+  }
+
+  .text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: inherit;
+    max-width: 500px;
+  }
+
+
+  section4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #F1E9DE; 
+    padding: 0; 
+    margin:0; 
+    gap:50px;
+
+  }
+
+  .section4 .image {
+    width: 50%;
+    height: 900px;
+    max-width: 900px; 
+    margin: 0;
+
+  }

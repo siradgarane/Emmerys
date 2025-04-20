@@ -1,0 +1,191 @@
+.header-main {
+    background-color: #A4976B;
+    width:100%; 
+    height:70px; 
+    padding: 0 10px; 
+    display:flex; 
+    justify-content: space-between;
+    position:fixed; 
+    top:0; 
+    z-index: 9999;
+
+
+}
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 24px;
+    padding:5px;
+    margin-top:10px;
+    text-decoration: none;
+    color:#F1E9DE; 
+    cursor: pointer;
+
+}
+
+.logo  a {
+    text-decoration: none;
+    color:#F1E9DE; 
+}
+nav {
+    display: flex;
+}
+
+.header-main ul {
+    height:100%; 
+    padding-left:40px; 
+    list-style: none;
+    display: flex;
+    align-self: center;
+   
+}
+
+
+.header-main ul li {
+    position: relative;
+    align-self: center; 
+    
+
+
+}
+
+
+.header-main ul li a{
+    display: block;
+    padding: 0 20px; 
+    padding-bottom: 5px;
+    padding-top:5px; 
+    height:100%; 
+    line-height: 100%;
+    font-family: sweet-sans-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size:14px;
+    color:#F1E9DE; 
+    transition: all ease-in-out 200ms;
+    align-self: center; 
+    float: center;
+    
+  
+}
+
+
+.header-main ul li a:hover {
+    background-color: #B8A05A;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Dropdown css */
+
+.header-main .dropdown {
+    visibility: hidden;
+    background-color: #F3D8C7;
+    height:fit-content;  
+    width:fit-content; 
+    opacity: 0;
+    display: none;
+    position: absolute;
+    left: -20px;
+    transition:all ease-in-out 200ms; 
+    box-shadow: 4px 4px 8px rgba(100, 83, 44, 0.3);
+    
+
+}
+
+.header-main ul li ul ul {
+    visibility: hidden;
+    background-color: #F3D8C7;
+    height:fit-content;  
+    width:fit-content; 
+    opacity: 0;
+    display: none;
+    position: absolute;
+    left: 0px;
+    top:100%;
+    transition:all ease-in-out 100ms; 
+    
+    
+
+}
+
+.header-main ul li ul li a {
+    white-space: nowrap; 
+    height:20px; 
+    width:fit-content
+
+} 
+
+ul li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.header-main ul li ul li {
+    position: relative; 
+}
+
+/* Subdropdown css */
+
+.header-main ul li ul .subdropdown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 100%; 
+    top: 0;
+    background-color: #F3D8C7;
+    width:fit-content;
+    padding: 5px 0;
+    transition:all ease-in-out 100ms; 
+    box-shadow: 4px 4px 8px rgba(100, 83, 44, 0.3);
+    
+  
+}
+
+
+.header-main ul li:hover > ul,
+.header-main ul li ul li:hover > .subdropdown {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+
+.header-main ul li ul li a {
+    display: block;
+    padding: 10px;
+    color: #B8A05A;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    transition: all ease-in-out 100ms; 
+    
+}
+
+.header-main ul li ul li a:hover {
+    background-color: #B8A05A;
+    color: #fff;
+}
+
+/* Arrow css */
+.arrow {
+    border: solid #F1E9DE;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left:8px;
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
