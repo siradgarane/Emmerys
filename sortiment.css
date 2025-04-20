@@ -92,63 +92,101 @@
     color: #6B4B31;
 }
 
-/* SECTION4: GRID */ 
-
+/* SECTION4: */ 
 
 .section4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
-    
-  }
-
-  .section.reverse {
-    direction: rtl;
-  }
-
-  .section.reverse .text {
-    direction: ltr;
-  }
-
-
-.text {
-    padding: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .text h2 {
-    font-size: 2.5rem;
-    color: inherit;
-  }
-
-  .text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: inherit;
-    max-width: 500px;
-  }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #F1E9DE; 
+}
 
 
-  section4 {
+.varmdrikke {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: #F1E9DE; 
+    align-items: left;
+    background-color: #50543B; 
+    width: 100%;
     padding: 0; 
-    margin:0; 
-    gap:50px;
+    
+   
+
 
   }
 
-  .section4 .image {
-    width: 50%;
-    height: 900px;
-    max-width: 900px; 
-    margin: 0;
+  .section4-image-varmdrikke{
+    background-image: url('images/varmdrikke-900h-600w.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;  
+    height: 900px; 
+ 
+   
+
+  }
+
+  .section4-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 50%; 
+  
+
+}
+
+.section4-text h1 {
+    margin:20px; 
+}
+
+.section4-text p {
+    margin:20px; 
+}
+
+
+.morgen {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center ;
+    background-color: #8A5E2D; 
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0; 
+
+}
+.section4-image-morgen{
+    background-image: url('images/morgen-900h-600w.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;  
+    height: 900px; 
+ 
+   
+
+  }
+
+  
+.frokost {
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    background-color: #F1E9DE; 
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0; 
+
+}
+.section4-image-frokost{
+    background-image: url('images/sandwich-900h-600w.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;  
+    height: 900px; 
 
   }
