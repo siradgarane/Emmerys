@@ -165,6 +165,51 @@ section {
   padding: 2rem;
 }
 
+/* Policy pages (Brugervilkår, Privatlivspolitik, Cookies) */
+.policy-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Fill entire viewport height */
+  background-color: var(--dark-color); /* Match other sections */
+  padding: 3rem 1rem;
+  color: #F1E9DE;
+  text-align: center; /* Center text for policy pages */
+}
+
+.policy-section .content {
+  flex: 1; /* Push footer to bottom */
+  max-width: 800px; /* Consistent with other sections */
+  margin: 0 auto; /* Center content */
+}
+
+/* Override grid-section for policy pages to avoid grid layout */
+.policy-section .grid-section {
+  display: block; /* Remove grid layout for single-column content */
+  text-align: center;
+}
+
+.policy-section h1 {
+  font-family: "Shippori Mincho", sans-serif;
+  font-size: 48px; /* Match global h1 */
+  margin-bottom: 1rem;
+  color: #F1E9DE;
+}
+
+.policy-section h2 {
+  font-family: "Shippori Mincho", sans-serif;
+  font-size: 20px; /* Match global h2 */
+  margin-bottom: 1rem;
+  color: #F1E9DE;
+}
+
+.policy-section p {
+  font-family: "Sweet Sans Pro Light", sans-serif;
+  font-size: 20px; /* Match global p */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #F1E9DE;
+}
+
 /* Typografi */
 h1 {
   font-family: "Shippori Mincho", sans-serif;
@@ -514,6 +559,18 @@ footer .copyright {
 
   .tilmeld-container {
       justify-content: center; /* Already centered on mobile */
+  }
+
+  .policy-section h1 {
+      font-size: 2rem; /* Match global h1 */
+  }
+
+  .policy-section h2 {
+      font-size: 1.5rem; /* Match global h2 */
+  }
+
+  .policy-section p {
+      font-size: 1rem; /* Match global p */
   }
 
   footer .links a {
