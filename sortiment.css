@@ -1,0 +1,380 @@
+/* SECTION 1: TITLE */
+.section-1-container {
+    display: flex;
+    justify-content: center;
+    background-image: url('images/sandwich.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 400px;
+}
+
+.section-1-div-container {
+    display: flex;
+    flex-direction: column; /* Always stack title and text vertically */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text readability */
+}
+
+.section-1-div-container h1 {
+    width: 100%;
+    max-width: 400px;
+    color: #F1E9DE;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Shippori Mincho', serif;
+}
+
+.section-1-div-container p {
+    width: 100%;
+    max-width: 650px;
+    color: #F1E9DE;
+    font-size: 1.2rem;
+    text-align: center; /* Centered as specified */
+    font-family: 'Sweet Sans Pro', sans-serif;
+}
+
+/* SECTION 2: MENUKORT */
+.section2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #8A5E2D;
+    gap: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image {
+    width: 50%;
+    max-width: 900px;
+    height: 600px;
+    background-image: url('images/menukort-900h-600w.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menukort-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+    width: 50%;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.menukort-text h1 {
+    color: #F1E9DE;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: left; /* Align heading to the left */
+    font-family: 'Shippori Mincho', serif;
+}
+
+.menukort-text p {
+    color: #F1E9DE;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left; /* Align paragraph to the left */
+    font-family: 'Sweet Sans Pro', sans-serif;
+}
+
+.menukort-text .btn {
+    border: 2px solid #F1E9DE;
+    color: #F1E9DE;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Sweet Sans Pro', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menukort-text .btn:hover {
+    background-color: #F1E9DE;
+    color: #8A5E2D;
+}
+
+/* SECTION 3: ALLERGI OG PRODUKTINFORMATION */
+.allergi-section {
+    background-color: #F1E9DE;
+    padding: 80px 30px;
+    text-align: left; /* Align text to the left */
+    color: #6B4B31;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    max-width: 900px;
+    margin-right: auto; /* Push content to the left */
+}
+
+.allergi-image {
+    width: 100%;
+    max-width: 900px;
+    height: 600px;
+    background-image: url('images/allergi-placeholder.jpg'); /* Replace with actual image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.allergi-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: left; /* Align heading to the left */
+    font-family: 'Shippori Mincho', serif;
+}
+
+.allergi-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left; /* Align paragraph to the left */
+    font-family: 'Sweet Sans Pro', sans-serif;
+}
+
+.allergi-section .btn {
+    border: 2px solid #6B4B31;
+    color: #6B4B31;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Sweet Sans Pro', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.allergi-section .btn:hover {
+    background-color: #6B4B31;
+    color: #F1E9DE;
+}
+
+/* SECTION 4: VARMDRIKKE, MORGEN, FROKOST */
+.section4 {
+    display: flex;
+    flex-direction: column;
+    background-color: #F1E9DE;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.varmdrikke,
+.morgen,
+.frokost {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.varmdrikke {
+    background-color: #50543B;
+}
+
+.morgen {
+    background-color: #8A5E2D;
+    flex-direction: row-reverse;
+}
+
+.frokost {
+    background-color: #F1E9DE;
+}
+
+.section4-image-varmdrikke,
+.section4-image-morgen,
+.section4-image-frokost {
+    width: 50%;
+    max-width: 900px;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section4-image-varmdrikke {
+    background-image: url('images/varmdrikke-900h-600w.jpg');
+}
+
+.section4-image-morgen {
+    background-image: url('images/morgen-900h-600w.jpg');
+}
+
+.section4-image-frokost {
+    background-image: url('images/sandwich-900h-600w.jpg');
+}
+
+.section4-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+    width: 50%;
+    padding: 20px;
+}
+
+.section4-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: left; /* Align heading to the left */
+    font-family: 'Shippori Mincho', serif;
+}
+
+.section4-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left; /* Align paragraph to the left */
+    font-family: 'Sweet Sans Pro', sans-serif;
+}
+
+.section4-text .btn {
+    border: 2px solid;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Sweet Sans Pro', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.varmdrikke .section4-text h1,
+.varmdrikke .section4-text p,
+.varmdrikke .section4-text .btn,
+.morgen .section4-text h1,
+.morgen .section4-text p,
+.morgen .section4-text .btn {
+    color: #F1E9DE;
+    border-color: #F1E9DE;
+}
+
+.varmdrikke .section4-text .btn:hover,
+.morgen .section4-text .btn:hover {
+    background-color: #F1E9DE;
+    color: #50543B;
+}
+
+.frokost .section4-text h1,
+.frokost .section4-text p,
+.frokost .section4-text .btn {
+    color: #8A5E2D;
+    border-color: #8A5E2D;
+}
+
+.frokost .section4-text .btn:hover {
+    background-color: #8A5E2D;
+    color: #F1E9DE;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    /* SECTION 1: TITLE */
+    .section-1-container {
+        min-height: 300px;
+    }
+
+    .section-1-div-container {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .section-1-div-container h1 {
+        font-size: 2rem;
+    }
+
+    .section-1-div-container p {
+        font-size: 1rem;
+        text-align: center; /* Keep centered on narrow screens */
+    }
+
+    /* SECTION 2: MENUKORT */
+    .section2 {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .image,
+    .menukort-text {
+        width: 100%;
+        max-width: 100%;
+        height: 400px;
+    }
+
+    .menukort-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .menukort-text h1 {
+        font-size: 2rem;
+        text-align: center; /* Center on narrow screens */
+    }
+
+    .menukort-text p {
+        font-size: 1rem;
+        text-align: center; /* Center on narrow screens */
+    }
+
+    /* SECTION 3: ALLERGI OG PRODUKTINFORMATION */
+    .allergi-section {
+        padding: 40px 15px;
+        align-items: center;
+        text-align: center;
+        margin-right: 0; /* Reset margin on narrow screens */
+    }
+
+    .allergi-image {
+        height: 400px;
+    }
+
+    .allergi-section h1 {
+        font-size: 2rem;
+        text-align: center; /* Center on narrow screens */
+    }
+
+    .allergi-section p {
+        font-size: 1rem;
+        text-align: center; /* Center on narrow screens */
+    }
+
+    /* SECTION 4: VARMDRIKKE, MORGEN, FROKOST */
+    .varmdrikke,
+    .morgen,
+    .frokost {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .section4-image-varmdrikke,
+    .section4-image-morgen,
+    .section4-image-frokost,
+    .section4-text {
+        width: 100%;
+        max-width: 100%;
+        height: 400px;
+    }
+
+    .section4-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .section4-text h1 {
+        font-size: 2rem;
+        text-align: center; /* Center on narrow screens */
+    }
+
+    .section4-text p {
+        font-size: 1rem;
+        text-align: center; /* Center on narrow screens */
+    }
+}

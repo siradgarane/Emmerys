@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortiment | Emmerys</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon-emmerys.svg">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="general-sortiment.css">
+    <link rel="stylesheet" href="headerfooter.css">
+    <link rel="stylesheet" href="sortiment.css">
+    <!-- Google Fonts: Shippori Mincho and Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <!-- Adobe Fonts: Sweet Sans Pro -->
+    <link href="https://fonts.cdnfonts.com/css/sweet-sans-pro" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" aria-label="Gå til Emmerys forside">
+                <img src="images/emmerys.svg" alt="Emmerys Logo" />
+            </a>
+        </div>
+        <nav aria-label="Hovednavigation">
+            <input type="checkbox" id="burger-toggle" class="burger-toggle" aria-hidden="true" />
+            <label for="burger-toggle" class="burger-label" aria-label="Åbn/luk menu">☰</label>
+            <ul class="nav-links">
+                <li><a href="forside.html">FORSIDE</a></li>
+                <li><a href="sortiment.html" class="active" aria-current="page">SORTIMENT</a></li>
+                <li><a href="find-emmerys.html">FIND EMMERYS</a></li>
+                <li><a href="job.html">JOB</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+                <li><a href="om-emmerys.html">OM EMMERYS</a></li>
+                <li><a href="tilmeld.html" class="tilmeld-btn">TILMELD</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECTION 1: TITLE -->
+        <section class="section-1-container" aria-labelledby="sortiment-title">
+            <div class="section-1-div-container">
+                <h1 id="sortiment-title">Vores Eksklusive Sortiment</h1>
+                <p>Hos Emmerys tilbyder vi et nøje udvalgt sortiment af kvalitetsprodukter, der spænder fra lækre brød til delikate kager og aromatisk kaffe. Hver enkelt vare er skabt med omhu og passion for at give dig en uforglemmelig smagsoplevelse.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: MENUKORT -->
+        <section class="section2" aria-labelledby="menukort-title">
+            <div class="image" role="img" aria-label="Menukort billede"></div>
+            <div class="menukort-text">
+                <h1 id="menukort-title">Se hele vores menukort</h1>
+                <p>Oplev vores eksklusive udvalg af lækre brød, kager og specialkaffe, der forkæler dine sanser.</p>
+                <div class="buttons">
+                    <a href="https://emmerys.dk/wp-content/uploads/2025/04/Menukort-4.pdf" class="btn light">Se Menukort</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ALLERGI OG PRODUKTINFORMATION -->
+        <section class="allergi-section" aria-labelledby="allergi-title">
+            <div class="allergi-image" role="img" aria-label="Allergi og produktinformation billede"></div>
+            <h1 id="allergi-title">Allergi og produktinformation</h1>
+            <p>Hos Emmerys går vi op i gennemsigtighed og ærlige råvarer. Her finder du detaljeret information om vores produkter – fra ingredienser og næringsindhold til allergener.</p>
+            <div class="buttons">
+                <a href="https://emmerys.dk/wp-content/uploads/2025/01/Allergener-bilag-Februar-2025.pdf" class="btn light">Produktoversigt</a>
+            </div>
+        </section>
+
+        <!-- SECTION 4: VARMDRIKKE, MORGEN, FROKOST -->
+        <section class="section4" aria-label="Sortiment detaljer">
+            <!-- Varme Drikke -->
+            <div class="varmdrikke" aria-labelledby="varmdrikke-title">
+                <div class="section4-image-varmdrikke" role="img" aria-label="Varme drikke billede"></div>
+                <div class="section4-text">
+                    <h1 id="varmdrikke-title">Varme drikke</h1>
+                    <p>Hos Emmerys elsker vi kaffe – økologisk kaffe. Derfor brygger vi din kaffe på 100% økologiske vaskede Arabica-bønner, der kommer direkte fra risteriet.</p>
+                    <div class="buttons">
+                        <a href="varmdrikke.html" class="btn dark">Se mere</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Morgen -->
+            <div class="morgen" aria-labelledby="morgen-title">
+                <div class="section4-image-morgen" role="img" aria-label="Morgen billede"></div>
+                <div class="section4-text">
+                    <h1 id="morgen-title">Morgen</h1>
+                    <p>Start dagen med en økologisk skyr og granola eller et smurt rundstykke. Eller prøv vores brunch med økologisk morgenbrød, blødkogt æg og diverse specialiteter. Perfekt til når du trænger til en ekstra lækker morgen.</p>
+                    <div class="buttons">
+                        <a href="morgen.html" class="btn dark">Se mere</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frokost -->
+            <div class="frokost" aria-labelledby="frokost-title">
+                <div class="section4-image-frokost" role="img" aria-label="Frokost billede"></div>
+                <div class="section4-text">
+                    <h1 id="frokost-title">Frokost</h1>
+                    <p>Stil frokostsulten med vores frisklavede sandwich. Vælg mellem rugbrødssandwich med laks eller avokado eller prøv en grillet focacciasandwich med skinke og ost, avokado eller vores sæsonvariant. Vi har både veganske og vegetariske sandwich.</p>
+                    <div class="buttons">
+                        <a href="frokost.html" class="btn light">Se mere</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="links">
+          <p>
+            <a href="sortiment.html">Sortiment</a> 
+            <a href="find-emmerys.html">Find Emmerys</a> 
+            <a href="job.html">Job</a> 
+            <a href="kontakt.html">Kontakt</a> 
+            <a href="om-emmerys.html">Om Emmerys</a> 
+            <a href="privatlivspolitik.html">Privatlivspolitik</a> 
+            <a href="brugsvilkaar.html">Brugsvilkår</a> 
+            <a href="cookies.html">Cookies</a>
+          </p>
+        </div>
+        <div class="copyright">
+          <p>© 2025 Emmerys. Alle rettigheder forbeholdes.</p>
+        </div>
+      </footer>
+</body>
+</html>
