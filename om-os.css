@@ -1,256 +1,248 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-    color: white;
-    background-color: #000;
-  }
-  
-  /* HERO SECTION */
-  .hero {
-    position: relative;
-    height: 100vh;
-    background-image: url('images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-  }
-  
-  .hero-overlay {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    color: white;
-    text-align: left;
-  }
-  
-  .hero h1 {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 4rem;
-    line-height: 1.2;
-    font-weight: 700;
-    padding-bottom: 2rem;
-  }
-  
-  .hero p {
-    font-family: 'sweet-sans-pro', sans-serif;
-    font-size: 1.25rem;
-    padding-bottom: 2rem;
-  }
-  
-  .hero-buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .hero-buttons a {
-    font-family: 'sweet-sans-pro', sans-serif;
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: normal;
-  }
-  
-  .hero-buttons a:first-child {
-    background: white;
-    color: black;
-  }
-  
-  .hero-buttons a:last-child {
-    background: transparent;
-    color: white;
-  }
-  
-  .hero-buttons a:hover {
-    opacity: 0.85;
-    cursor: pointer;
-  }
-  
-  /* SPLIT SECTIONS */
-  .split-section {
-    display: flex;
-    height: 100vh;
-    color: #F1E9DE;
-  }
-  
-  .split-section.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .split-section .text,
-  .split-section .image {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem;
-  }
-  
-  .split-section .text {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-  
-  .split-section .content {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  .split-section.green {
-    background-color: #4c4a2e;
-  }
-  
-  .split-section.brown {
-    background-color: #7a4e25;
-  }
-  
-  .image1 {
-    background: url('/images/butik-2.jpg') center/cover no-repeat;
-  }
-  
-  .image2 {
-    background: url('/images/blomst.jpg') center/cover no-repeat;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  text-align: left;
+}
+
+.hero h1 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+.hero p {
+  font-family: 'sweet-sans-pro', sans-serif;
+  font-size: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-buttons a {
+  font-family: 'sweet-sans-pro', sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: normal;
+}
+
+.hero-buttons a:first-child {
+  background: white;
+  color: black;
+}
+
+.hero-buttons a:last-child {
+  background: transparent;
+  color: white;
+}
+
+.hero-buttons a:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+/* SPLIT SECTIONS */
+.split-section {
+  display: flex;
+  height: 100vh;
+  color: #F1E9DE;
+}
+
+.split-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.split-section .text,
+.split-section .image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.split-section .text {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.split-section .content {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.split-section.green {
+  background-color: #4c4a2e;
+}
+
+.split-section.brown {
+  background-color: #7a4e25;
+}
+
+.image1 {
+  background: url('images/butik-2.jpg') center/cover no-repeat;
+}
+
+.image2 {
+  background: url('images/blomst.jpg') center/cover no-repeat;
+}
+
 .split-section h2 {
   font-family: 'Shippori Mincho', serif;
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
   color: #F1E9DE;
-  text-align: left; /* <- Denne linje tilføjes */
+  text-align: left;
 }
 
+.split-section p {
+  font-family: 'sweet-sans-pro', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  color: #F1E9DE;
+  text-align: left;
+}
+
+.split-section a {
+  background: transparent;
+  color: #F1E9DE;
+  border: 2px solid #F1E9DE;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-family: 'sweet-sans-pro', sans-serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+/* Hover-effekter med farvevariationer */
+.split-section.green a:hover {
+  background-color: #F1E9DE;
+  color: #4c4a2e;
+}
+
+.split-section.brown a:hover {
+  background-color: #F1E9DE;
+  color: #7a4e25;
+}
+
+/* RESPONSIVT DESIGN */
+@media (max-width: 768px) {
+  .split-section,
+  .split-section.reverse {
+    flex-direction: column !important;
+    height: auto;
   }
-  
+
+  .split-section .text,
+  .split-section .image {
+    width: 100%;
+    height: 75vh;
+    min-height: 75vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .split-section .text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .split-section .content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .split-section h2 {
+    font-size: 2.5rem;
+  }
+
   .split-section p {
-    font-family: 'sweet-sans-pro', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    color: #F1E9DE;
+    font-size: 1.25rem;
   }
-  
-  .split-section a {
-    background: transparent;
-    color: #F1E9DE;
-    border: 2px solid #F1E9DE;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    font-family: 'sweet-sans-pro', sans-serif;
-    font-weight: bold;
-    transition: all 0.3s ease;
+
+  .image1,
+  .image2 {
+    display: block;
+    width: 100%;
+    height: 75vh;
+    min-height: 75vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  
-  /* Hover-effekter med farvevariationer */
-  .split-section.green a:hover {
-    background-color: #F1E9DE;
-    color: #4c4a2e; /* olivengrøn */
+
+  .hero {
+    background-position: top;
+    text-align: center;
   }
-  
-  .split-section.brown a:hover {
-    background-color: #F1E9DE;
-    color: #7a4e25; /* brun */
+
+  .hero-overlay {
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
   }
-  
-  /* RESPONSIVT DESIGN */
-  @media (max-width: 768px) {
-    .split-section,
-    .split-section.reverse {
-      flex-direction: column !important;
-      height: auto;
-    }
-  
-    .split-section .text,
-    .split-section .image {
-      width: 100%;
-      height: 75vh;
-      min-height: 75vh;
-      padding: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .split-section .text {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .split-section .content {
-      max-width: 90%;
-      margin: 0 auto;
-    }
-  
-    .split-section h2 {
-      font-size: 2.5rem;
-    }
-  
-    .split-section p {
-      font-size: 1.25rem;
-    }
-  
-    .image1,
-    .image2 {
-      display: block;
-      width: 100%;
-      height: 75vh;
-      min-height: 75vh;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  
-    /* HERO */
-    .hero {
-      background-position: top;
-      text-align: center;
-    }
-  
-    .hero-overlay {
-      padding: 2rem;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-  
-    .hero p {
-      font-size: 1rem;
-    }
-  
-    .hero-buttons {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-  
-    .hero-buttons a {
-      width: 100%;
-      text-align: center;
-    }
+
+  .hero h1 {
+    font-size: 2.5rem;
   }
-  
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
