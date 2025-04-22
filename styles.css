@@ -21,7 +21,7 @@ body {
 
 /* Header og navigation */
 header {
-  background-color: var(--primary-color); /* Nu #A4976B */
+  background-color: var(--secondary-color); /* Changed to #8A5E2D */
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -62,7 +62,7 @@ header {
 
 .nav-links li a {
   text-decoration: none;
-  color: var(--dark-color); /* Nu #50543B */
+  color: var(--light-color); /* Beige #F1E9DE */
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
@@ -70,7 +70,7 @@ header {
 }
 
 .nav-links li a.active {
-  color: var(--secondary-color); /* Nu #8A5E2D */
+  color: var(--light-color); /* Beige #F1E9DE */
 }
 
 .nav-links li a::after {
@@ -78,7 +78,7 @@ header {
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: var(--secondary-color); /* Nu #8A5E2D */
+  background-color: var(--light-color); /* Beige #F1E9DE */
   bottom: -4px;
   left: 0;
   transition: width 0.3s ease;
@@ -89,17 +89,16 @@ header {
   width: 100%;
 }
 
-/* Tilmeld-knap i navigationen */
-.nav-links .tilmeld-btn {
-  background-color: var(--secondary-color); /* Nu #8A5E2D */
-  color: #F1E9DE;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+.nav-links li a:hover {
+  color: var(--primary-color); /* Brown #8A5E2D */
 }
 
-.nav-links .tilmeld-btn:hover {
-  background-color: var(--dark-color); /* Nu #50543B */
+/* Tilmeld-knap i navigationen */
+.nav-links .tilmeld-btn {
+  background-color: #D3D3D3; /* Light grey */
+  color: #A4976B; /* Explicit beige */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 }
 
 /* Burgermenu til mobil */
@@ -138,6 +137,8 @@ header {
   .nav-links .tilmeld-btn {
       width: fit-content;
       align-self: center;
+      background-color: #D3D3D3; /* Light grey */
+      color: #F1E9DE; /* Explicit beige */
   }
 }
 
@@ -457,10 +458,10 @@ button:hover, .btn:hover {
 
 /* Footer */
 footer {
-  background-color: var(--primary-color); /* Nu #A4976B */
+  background-color: var(--secondary-color); /* Changed to #8A5E2D */
   padding: 1rem;
   text-align: center;
-  color: var(--dark-color); /* Nu #50543B */
+  color: var(--dark-color); /* Text color remains #50543B */
 }
 
 footer .links {
@@ -468,7 +469,7 @@ footer .links {
 }
 
 footer a {
-  color: var(--dark-color); /* Nu #50543B */
+  color: var(--light-color); /* Beige #F1E9DE */
   text-decoration: none;
   margin: 0 0.5rem;
   position: relative;
@@ -480,14 +481,14 @@ footer a::after {
   position: absolute;
   width: 0;
   height: 1px;
-  background-color: var(--secondary-color); /* Nu #8A5E2D */
+  background-color: var(--light-color); /* Beige #F1E9DE */
   bottom: -2px;
   left: 0;
   transition: width 0.3s ease;
 }
 
 footer a:hover {
-  color: var(--secondary-color); /* Nu #8A5E2D */
+  color: var(--primary-color); /* Brown #8A5E2D */
 }
 
 footer a:hover::after {
