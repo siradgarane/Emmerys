@@ -133,11 +133,14 @@
     background: url('/images/blomst.jpg') center/cover no-repeat;
   }
   
-  .split-section h2 {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    color: #F1E9DE;
+.split-section h2 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: #F1E9DE;
+  text-align: left; /* <- Denne linje tilføjes */
+}
+
   }
   
   .split-section p {
