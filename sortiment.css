@@ -2,30 +2,40 @@
 .section-1-container {
     display: flex;
     justify-content: center;
+    align-items: center; /* Center content vertically */
     background-image: url('images/sandwich.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    min-height: 400px;
+    min-height: 400px; /* Maintain minimum height */
+    position: relative; /* Create stacking context for pseudo-element */
+}
+
+/* Semi-transparent background using ::before */
+.section-1-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1; /* Place behind content */
 }
 
 .section-1-div-container {
     display: flex;
     flex-direction: row; /* Display title and text side by side */
-    flex-wrap: wrap; /* Allow wrapping for smaller wide screens */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 30px; /* Increased gap for better spacing */
+    gap: 30px; /* Spacing between elements */
     padding: 20px;
     box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 59%;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent sort baggrund */
+    position: relative; /* Ensure content is above ::before */
+    z-index: 2; /* Place content above semi-transparent background */
 }
 
 .section-1-div-container h1 {
@@ -42,7 +52,7 @@
     max-width: 650px;
     color: #F1E9DE;
     font-size: 1.2rem;
-    text-align: center; /* Centered as specified */
+    text-align: center;
     font-family: 'Sweet Sans Pro', sans-serif;
 }
 
