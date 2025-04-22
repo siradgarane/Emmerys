@@ -144,7 +144,7 @@ header {
 
 /* Generelle sektioner */
 section {
-  padding: 3rem 1rem;
+
   text-align: center;
   background-color: var(--dark-color); /* Nu #50543B */
 }
