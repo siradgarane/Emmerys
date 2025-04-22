@@ -76,7 +76,7 @@
 .btn.light {
     color: #A4976B;
     background-color: #F1E9DE;
-    font-family: "Sweet Sans Pro Light", sans-serif;
+    font-family: "Sweet Sans Pro", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -85,7 +85,7 @@
 .btn.dark {
     color: #F1E9DE;
     background-color: #A4976B;
-    font-family: "Sweet Sans Pro Light", sans-serif;
+    font-family: "Sweet Sans Pro", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;

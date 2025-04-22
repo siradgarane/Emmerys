@@ -195,6 +195,18 @@ header {
     text-decoration: none;
     color: #F1E9DE;
   }
+
+  h3 {
+    font-family: "Sweet sans pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+    color: #8A5E2D;
+
+  }
   
   p {
     font-family: "Sweet Sans Pro Light", sans-serif;
