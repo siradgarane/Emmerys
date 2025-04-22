@@ -113,39 +113,33 @@
 .allergi-section {
     background-color: #F1E9DE;
     padding: 80px 30px;
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Center text */
     color: #6B4B31;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align content to the left */
-    max-width: 900px;
-    margin-right: auto; /* Push content to the left */
-}
-
-.allergi-image {
-    width: 100%;
-    max-width: 900px;
-    height: 600px;
-    background-image: url('images/allergi-placeholder.jpg'); /* Replace with actual image */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 20px;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    width: 100%; /* Full width */
+    margin: 0; /* Remove any default margins */
 }
 
 .allergi-section h1 {
+    color: #8A5E2D;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    text-align: left; /* Align heading to the left */
+    text-align: center; /* Center heading */
     font-family: 'Shippori Mincho', serif;
+    max-width: 600px; /* Narrower width for heading */
 }
 
 .allergi-section p {
+    color: #8A5E2D;
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 20px;
-    text-align: left; /* Align paragraph to the left */
+    text-align: center; /* Center paragraph */
     font-family: 'Sweet Sans Pro', sans-serif;
+    max-width: 600px; /* Narrower width for paragraph */
 }
 
 .allergi-section .btn {
@@ -155,6 +149,8 @@
     text-decoration: none;
     font-family: 'Sweet Sans Pro', sans-serif;
     transition: background-color 0.3s, color 0.3s;
+    max-width: 200px; /* Narrower width for button */
+    text-align: center; /* Ensure button text is centered */
 }
 
 .allergi-section .btn:hover {
