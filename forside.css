@@ -118,7 +118,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Maximize space between text and image */
+    position: relative; /* Allow absolute positioning for image if needed */
 }
 
 .velkommen {
@@ -126,18 +127,22 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    text-align: left; /* Align text to the left */
+    margin-right: 20px; /* Add spacing between text and image */
 }
 
 .section2-image {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; /* Push image to the right */
+    margin-left: auto; /* Ensure image is pushed to the far right */
 }
 
 .section2-image img {
     width: 400px;
     height: auto;
+    display: block; /* Ensure image behaves as a block for alignment */
 }
 
 /* Section 3 */
