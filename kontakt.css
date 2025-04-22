@@ -1,0 +1,126 @@
+/* kontakt.css */
+
+/* fontstyles, farver for kontakt*/
+
+
+.kontakt { 
+    background-color: #F1E9DE; /* background color for section 2 */
+    height: 100vh; 
+    width: 100%; 
+    padding: 60px 30px; 
+
+}
+
+.information {
+    width: auto; 
+    height: auto; 
+    margin: 0 auto; /* center the container */
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt h1 {
+    font-family: "Shippori Mincho", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 42px;
+    font-style: normal;
+    text-decoration: none;
+    color: #8A5E2D;
+
+}
+
+.kontakt h2 {
+    font-family: "Shippori Mincho", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+    text-decoration: none;
+    color: #8A5E2D;
+   
+
+  }
+
+.kontakt p, a {
+    font-size: 16px; 
+    font-family: "Sweet sans pro", sans-serif;
+    color: #8A5E2D; /* text color for section 2 */
+    margin-bottom: 15px; /* space between paragraphs */
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+/* generel style for kontakt*/
+
+.contact-section {
+    display: flex; 
+    flex-direction: row;;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: #f2eae3;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    max-width: 1024px; 
+    min-height: 450px;
+    margin: 0 auto 4rem;
+    gap: 2rem;
+    align-items: stretch; /* Ensures all items stretch to the same height */
+ 
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px; /* padding around the text */
+    margin-right: 30px;;
+ 
+}
+
+.information {
+    flex: 1;
+    min-width: 150px;
+    margin: 10px;
+ 
+}
+
+.contact-image {
+    flex: 1;
+    min-width: 400px;
+    height: auto;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+
+@media (max-width: 768px) {
+    .contact-section {
+      flex-direction: column;
+      max-height: 200vh; /* Juster højden for mobilvisning */
+    }
+  
+    .contact-info,
+    .contact-image {
+      width: 100%;
+      min-height: auto;
+    }
+  
+    .contact-info {
+      padding: 2rem;
+      text-align: center;
+    }
+  
+    .contact-image img {
+      height: 250px; /* Begrænset højde på mobil så det ikke fylder for meget */
+      object-fit: cover;
+    }
+  }
