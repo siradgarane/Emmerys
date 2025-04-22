@@ -47,7 +47,7 @@ header {
 .burger-label {
   display: none;
   font-size: 1.5rem;
-  color: var(--dark-color); /* Nu #50543B */
+  color: #F1E9DE; /* Nu #50543B */
   cursor: pointer;
 }
 
@@ -121,7 +121,7 @@ header {
       top: 60px;
       left: 0;
       width: 100%;
-      background-color: var(--primary-color); /* Nu #A4976B */
+      background-color: var(--secondary-color); /* Nu #A4976B */
       flex-direction: column;
       padding: 1rem;
   }
@@ -137,8 +137,8 @@ header {
   .nav-links .tilmeld-btn {
       width: fit-content;
       align-self: center;
-      background-color: #D3D3D3; /* Light grey */
-      color: #F1E9DE; /* Explicit beige */
+      background-color: #F1E9DE; /* Light grey */
+      color: #8A5E2D; /* Explicit beige */
   }
 }
 
