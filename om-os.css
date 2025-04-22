@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-/* HERO SECTION */
-.hero {
+/* EMMERYS HERO SECTION */
+.emmerys-hero {
   position: relative;
   height: 100vh;
   background-image: url('images/hero.jpg');
@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
 }
 
-.hero::before {
+.emmerys-hero::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -22,7 +22,7 @@
   z-index: 1;
 }
 
-.hero-overlay {
+.emmerys-hero-overlay {
   position: relative;
   z-index: 2;
   max-width: 800px;
@@ -35,7 +35,7 @@
   text-align: left;
 }
 
-.hero h1 {
+.emmerys-hero h1 {
   font-family: 'Shippori Mincho', serif;
   font-size: 4rem;
   line-height: 1.2;
@@ -43,18 +43,18 @@
   padding-bottom: 2rem;
 }
 
-.hero p {
+.emmerys-hero p {
   font-family: 'sweet-sans-pro', sans-serif;
   font-size: 1.25rem;
   padding-bottom: 2rem;
 }
 
-.hero-buttons {
+.emmerys-hero-buttons {
   display: flex;
   gap: 1rem;
 }
 
-.hero-buttons a {
+.emmerys-hero-buttons a {
   font-family: 'sweet-sans-pro', sans-serif;
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
@@ -64,17 +64,17 @@
   font-weight: normal;
 }
 
-.hero-buttons a:first-child {
+.emmerys-hero-buttons a:first-child {
   background: white;
   color: black;
 }
 
-.hero-buttons a:last-child {
+.emmerys-hero-buttons a:last-child {
   background: transparent;
   color: white;
 }
 
-.hero-buttons a:hover {
+.emmerys-hero-buttons a:hover {
   opacity: 0.85;
   cursor: pointer;
 }
