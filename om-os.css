@@ -126,11 +126,11 @@
   }
   
   .image1 {
-    background: url('images/butik-2.jpg') center/cover no-repeat;
+    background: url('/images/butik-2.jpg') center/cover no-repeat;
   }
   
   .image2 {
-    background: url('images/blomst.jpg') center/cover no-repeat;
+    background: url('/images/blomst.jpg') center/cover no-repeat;
   }
   
   .split-section h2 {
