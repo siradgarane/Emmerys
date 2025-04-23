@@ -66,6 +66,19 @@
     flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
+.btn.light1 {
+    border: 2px solid #F1E9DE !important; /* Increased specificity */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Sweet Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #a4976b !important;
+    background-color: #F1E9DE !important;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-align: center;
+    display: inline-block;}
+
 .btn, .btn.light, .btn.dark {
     border: 2px solid #F1E9DE !important; /* Increased specificity */
     padding: 10px 20px;
@@ -78,6 +91,12 @@
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     text-align: center;
     display: inline-block;
+}
+
+.btn.light1:hover {
+    background-color: #8A5E2D !important;
+    color: #845E2D !important;
+    border-color: #845E2D !important;
 }
 
 .btn:hover, .btn.light:hover, .btn.dark:hover {
