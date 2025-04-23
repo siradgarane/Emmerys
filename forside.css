@@ -59,47 +59,31 @@
 /* Buttons */
 .buttons {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
-.btn {
-    padding: 12px 24px;
+.btn, .btn.light, .btn.dark {
+    border: 2px solid #F1E9DE !important; /* Increased specificity */
+    padding: 10px 20px;
     text-decoration: none;
-    font-weight: bold;
-    background-color: #F1E9DE;
-}
-
-.btn.light {
-    color: #A4976B;
-    background-color: #F1E9DE;
-    font-family: "Sweet Sans Pro Light", sans-serif;
-    font-size: 18px;
-    font-style: normal;
+    font-family: 'Sweet Sans Pro', sans-serif;
+    font-size: 16px;
     font-weight: 500;
+    color: #F1E9DE !important;
+    background-color: transparent !important;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-align: center;
+    display: inline-block;
 }
 
-.btn.dark {
-    color: #F1E9DE;
-    background-color: #A4976B;
-    font-family: "Sweet Sans Pro Light", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    background: none;
-  color: F1E9DE;
-  border: 2px solid ;
-}
-
-.btn:hover {
-    opacity: 0.8;
-}
-
-.udforsk {
-    display: flex;
-    padding-top: 30px;
+.btn:hover, .btn.light:hover, .btn.dark:hover {
+    background-color: #F1E9DE !important;
+    color: #845E2D !important;
+    border-color: #845E2D !important;
 }
 
 /* Section 2 */
