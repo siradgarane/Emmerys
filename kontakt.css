@@ -128,7 +128,7 @@
     }
 
     .contact-image img {
-        height: 200px; /* Justeret højde for bedre proportioner */
+        height: 100px; /* Justeret højde for bedre proportioner */
         object-fit: cover;
     }
 
