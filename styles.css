@@ -16,15 +16,15 @@ body {
   --primary-color: #A4976B; /* Lys brun */
   --secondary-color: #8A5E2D; /* Brun */
   --dark-color: #50543B; /* Mørk grønbrun */
-  --light-color: #F1E9DE; /* Tilføjet lys beige som variabel */
+  --light-color: #F1E9DE; /* Lys beige */
 }
 
 /* Header og navigation */
 header {
-  background-color: var(--secondary-color); /* Changed to #8A5E2D */
+  background-color: var(--secondary-color); /* #8A5E2D */
   padding: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Logo left, nav right */
   align-items: center;
   position: sticky;
   top: 0;
@@ -32,11 +32,20 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.logo {
+  margin-left: 1rem; /* Spacing from left edge */
+}
+
 .logo img {
-  height: 30px;
-  position: absolute;
-  left: 1rem;
-  bottom: 0.5rem;
+  height: 30px; /* Consistent logo size */
+  display: block; /* Ensure proper alignment */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Take available space */
+  justify-content: center; /* Center nav-links */
 }
 
 /* Burgermenu med CSS checkbox-hack */
@@ -47,8 +56,9 @@ header {
 .burger-label {
   display: none;
   font-size: 1.5rem;
-  color: #F1E9DE; /* Nu #50543B */
+  color: #F1E9DE;
   cursor: pointer;
+  margin-right: 1rem; /* Spacing from right edge */
 }
 
 .nav-links {
@@ -90,63 +100,104 @@ header {
 }
 
 .nav-links li a:hover {
-  color: var(--primary-color); /* Brown #8A5E2D */
+  color: var(--primary-color); /* Light brown #A4976B */
 }
 
 /* Tilmeld-knap i navigationen */
 .nav-links .tilmeld-btn {
   background-color: #D3D3D3; /* Light grey */
-  color: #8A5E2D; /* Explicit beige */
+  color: #8A5E2D; /* Brown */
   padding: 0.5rem 1rem;
   border-radius: 4px;
 }
 
 /* Burgermenu til mobil */
 @media (max-width: 768px) {
-  .logo img {
-      position: static;
+  header {
+    justify-content: space-between;
+    align-items: center;
   }
 
-  header {
-      justify-content: space-between;
+  .logo {
+    margin-left: 1rem; /* Consistent spacing */
+  }
+
+  nav {
+    flex-grow: 0; /* Prevent nav from taking extra space */
+    justify-content: flex-end; /* Align burger menu to right */
   }
 
   .burger-label {
-      display: block;
+    display: block;
   }
 
   .nav-links {
-      display: none;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: var(--secondary-color); /* Nu #A4976B */
-      flex-direction: column;
-      padding: 1rem;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color); /* #8A5E2D */
+    flex-direction: column;
+    padding: 1rem;
+    z-index: 999;
   }
 
   .burger-toggle:checked ~ .nav-links {
-      display: flex;
+    display: flex;
   }
 
   .nav-links li {
-      margin: 0.5rem 0;
+    margin: 0.5rem 0;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: var(--light-color); /* Beige #F1E9DE */
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links li a.active {
+    color: var(--light-color); /* Beige #F1E9DE */
+  }
+
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--light-color); /* Beige #F1E9DE */
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+
+  .nav-links li a:hover::after,
+  .nav-links li a.active::after {
+    width: 100%;
+  }
+
+  .nav-links li a:hover {
+    color: var(--primary-color); /* Light brown #A4976B */
   }
 
   .nav-links .tilmeld-btn {
-      width: fit-content;
-      align-self: center;
-      background-color: #F1E9DE; /* Light grey */
-      color: #8A5E2D; /* Explicit beige */
+    width: fit-content;
+    align-self: center;
+    background-color: #D3D3D3; /* Light grey */
+    color: #8A5E2D; /* Brown */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
   }
 }
 
 /* Generelle sektioner */
 section {
-
   text-align: center;
-  background-color: var(--dark-color); /* Nu #50543B */
+  background-color: var(--dark-color); /* #50543B */
 }
 
 /* Section1 (hero-sektion) */
@@ -155,7 +206,7 @@ section {
   margin: 0;
   z-index: -1;
   width: auto;
-  background-color: var(--dark-color); /* Nu #50543B */
+  background-color: var(--dark-color); /* #50543B */
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -171,10 +222,10 @@ section {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Fill entire viewport height */
-  background-color: var(--dark-color); /* Match other sections */
+  background-color: var(--dark-color); /* #50543B */
   padding: 3rem 1rem;
   color: #F1E9DE;
-  text-align: center; /* Center text for policy pages */
+  text-align: center;
 }
 
 .policy-section .content {
@@ -183,7 +234,6 @@ section {
   margin: 0 auto; /* Center content */
 }
 
-/* Override grid-section for policy pages to avoid grid layout */
 .policy-section .grid-section {
   display: block; /* Remove grid layout for single-column content */
   text-align: center;
@@ -191,21 +241,21 @@ section {
 
 .policy-section h1 {
   font-family: "Shippori Mincho", sans-serif;
-  font-size: 48px; /* Match global h1 */
+  font-size: 48px;
   margin-bottom: 1rem;
   color: #F1E9DE;
 }
 
 .policy-section h2 {
   font-family: "Shippori Mincho", sans-serif;
-  font-size: 20px; /* Match global h2 */
+  font-size: 20px;
   margin-bottom: 1rem;
   color: #F1E9DE;
 }
 
 .policy-section p {
   font-family: "Sweet Sans Pro Light", sans-serif;
-  font-size: 20px; /* Match global p */
+  font-size: 20px;
   line-height: 1.6;
   margin-bottom: 1rem;
   color: #F1E9DE;
@@ -220,6 +270,7 @@ h1 {
   font-style: normal;
   text-decoration: none;
   color: #F1E9DE;
+  display: block; /* Ensure visibility */
 }
 
 h2 {
@@ -244,7 +295,7 @@ p {
 }
 
 button, .btn {
-  background-color: var(--secondary-color); /* Nu #8A5E2D */
+  background-color: var(--secondary-color); /* #8A5E2D */
   color: #F1E9DE;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -257,12 +308,12 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-  background-color: var(--dark-color); /* Nu #50543B */
+  background-color: var(--dark-color); /* #50543B */
 }
 
 /* Hero-sektion (Forside) */
 .hero {
-  background-color: var(--dark-color); /* Nu #50543B */
+  background-color: var(--dark-color); /* #50543B */
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -305,12 +356,12 @@ button:hover, .btn:hover {
 /* Tilmeld-siden */
 .tilmeld-container {
   display: flex;
-  justify-content: center; /* Center the form horizontally */
+  justify-content: center;
   padding: 3rem;
 }
 
 .tilmeld-form {
-  background-color: var(--primary-color); /* Nu #A4976B */
+  background-color: var(--primary-color); /* #A4976B */
   padding: 2rem;
   width: 100%;
   max-width: 400px;
@@ -328,7 +379,7 @@ button:hover, .btn:hover {
   width: 100%;
   padding: 0.8rem;
   margin: 0.5rem 0;
-  border: 1px solid var(--dark-color); /* Nu #50543B */
+  border: 1px solid var(--dark-color); /* #50543B */
   border-radius: 4px;
 }
 
@@ -340,8 +391,8 @@ button:hover, .btn:hover {
 
 /* HTML5 validering */
 .tilmeld-form input:valid {
-  border-color: var(--secondary-color); /* Nu #8A5E2D */
-  background-color: rgba(138, 94, 45, 0.1); /* Opdateret til at matche #8A5E2D */
+  border-color: var(--secondary-color); /* #8A5E2D */
+  background-color: rgba(138, 94, 45, 0.1); /* Matches #8A5E2D */
 }
 
 .tilmeld-form input:invalid:not(:placeholder-shown) {
@@ -351,68 +402,143 @@ button:hover, .btn:hover {
 
 .tilmeld-form input:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(138, 94, 45, 0.5); /* Opdateret til at matche #8A5E2D */
+  box-shadow: 0 0 5px rgba(138, 94, 45, 0.5); /* Matches #8A5E2D */
 }
 
 /* Velkomstsektion (Find Emmerys) */
 .welcome-section {
-  background-color: var(--light-color); /* Nu #F1E9DE */
+  background-color: var(--light-color); /* #F1E9DE */
   padding: 3rem 1rem;
-  text-align: left;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; /* Align content to top */
+  gap: 2rem; /* Space between columns */
 }
 
 .welcome-section h1 {
-  margin-bottom: 0.5rem;
-  color: var(--secondary-color); /* Nu #50543B for bedre kontrast */
+  color: var(--secondary-color); /* #8A5E2D */
+  margin-bottom: 1rem;
+  font-size: 48px; /* Title size */
+  display: block; /* Ensure visibility */
+  flex: 1; /* Take available space */
+  text-align: left;
 }
 
-.welcome-section p {
-  max-width: 600px;
+.welcome-section h1 .welcome-text {
+  font-family: "Sweet Sans Pro Light", sans-serif;
+  font-size: 15px; /* Smaller than title */
+  font-weight: 300; /* Match <p> style */
+  color: var(--secondary-color); /* #8A5E2D */
+  display: block 1rem; /* Place above title */
+}
+
+.welcome-section .right-content {
+  flex: 1; /* Take available space */
+  max-width: 600px; /* Limit width for readability */
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Left-align text and buttons */
+}
+
+.welcome-section .right-content p {
+  color: var(--secondary-color); /* #8A5E2D */
   margin-bottom: 1.5rem;
-  color: var(--secondary-color); /* Nu #50543B for bedre kontrast */
+  font-family: "Sweet Sans Pro Light", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.welcome-section .right-content > div {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  justify-content: flex-start; /* Align buttons to left */
 }
 
 .welcome-section .btn-find {
-  background-color: var(--primary-color); /* Nu #8A5E2D */
+  background-color: var(--primary-color); /* #A4976B */
   color: #F1E9DE;
-  margin-right: 1rem;
+  font-family: "Sweet Sans Pro", sans-serif;
+  font-weight: bold;
 }
 
 .welcome-section .btn-udforsk {
   background: none;
-  color: var(--primary-color);
+  color: var(--primary-color); /* #A4976B */
   border: 2px solid var(--primary-color);
+  font-family: "Sweet Sans Pro", sans-serif;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .welcome-section {
+    flex-direction: column;
+    align-items: center; /* Center content for mobile */
+    text-align: center;
+  }
+
+  .welcome-section h1 {
+    text-align: center;
+    margin-bottom: 2rem; /* Extra space before right content */
+  }
+
+  .welcome-section .right-content {
+    max-width: 100%; /* Full width on mobile */
+    text-align: center; /* Center text */
+  }
+
+  .welcome-section .right-content > div {
+    justify-content: center; /* Center buttons */
+  }
 }
 
 /* Find-sektion (Find Emmerys) */
 .find-section {
-  background-color: var(--dark-color); /* Nu #50543B */
-  padding: 3rem 1rem;
-  color: #F1E9DE;
-  text-align: left;
+  background-color: var(--dark-color); /* #50543B */
+  padding: 3rem 5rem;
+  color: var(--light-color); /* #F1E9DE */
+  display: flex;
+  
+ 
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.find-section .content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .find-section h1 {
+  color: var(--light-color); /* White #F1E9DE */
   margin-bottom: 0.5rem;
+  margin-left: 0; /* Ensure no offset */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align all content to the left */
+  text-align: left;
+  max-width: 600px;
 }
 
 .find-section p {
-  max-width: 600px;
+  color: var(--light-color); /* White #F1E9DE */
   margin-bottom: 2rem;
+  text-align: left;
+  max-width: 600px;
 }
 
 .find-section .locations-map {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%; /* Full width of content */
 }
 
 .find-section .locations {
   flex: 1;
+  text-align: left;
 }
 
 .find-section .location {
@@ -420,29 +546,42 @@ button:hover, .btn:hover {
 }
 
 .find-section .location h3 {
-  color: var(--secondary-color); /* Nu #8A5E2D */
+  color: var(--light-color); /* White #F1E9DE */
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .find-section .location p {
+  color: var(--light-color); /* White #F1E9DE */
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .find-section .location .btn-find {
-  background-color: var(--secondary-color); /* Nu #8A5E2D */
-  color: #F1E9DE;
+  background: transparent;
+  border: 2px solid var(--light-color); /* White #F1E9DE */
+  color: var(--light-color); /* White #F1E9DE */
   margin-right: 1rem;
-}
-
-.find-section .location .learn-more {
-  color: var(--primary-color); /* Nu #A4976B */
-  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: "Sweet Sans Pro", sans-serif;
   font-weight: bold;
 }
 
+.find-section .location .btn-find:hover {
+  background-color: rgba(241, 233, 222, 0.1); /* Slight white tint */
+}
+
+.find-section .location .learn-more {
+  color: var(--light-color); /* White #F1E9DE */
+  text-decoration: none;
+  font-family: "Sweet Sans Pro", sans-serif;
+  font-weight: bold;
+  display: inline-block;
+}
+
 .find-section .location .learn-more:hover {
-  color: #F1E9DE;
+  text-decoration: underline; /* Underline on hover */
+  color: var(--light-color); /* Remain white */
 }
 
 .find-section .map {
@@ -453,15 +592,29 @@ button:hover, .btn:hover {
 .find-section .map img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  
+}
+
+@media (max-width: 1024px) {
+  .find-section .locations-map {
+    flex-direction: column;
+  }
+
+  .find-section .map {
+    max-width: 100%;
+  }
+
+  .find-section .locations {
+    text-align: left;
+  }
 }
 
 /* Footer */
 footer {
-  background-color: var(--secondary-color); /* Changed to #8A5E2D */
+  background-color: var(--secondary-color); /* #8A5E2D */
   padding: 1rem;
   text-align: center;
-  color: var(--dark-color); /* Text color remains #50543B */
+  color: var(--dark-color); /* #50543B */
 }
 
 footer .links {
@@ -488,7 +641,7 @@ footer a::after {
 }
 
 footer a:hover {
-  color: var(--primary-color); /* Brown #8A5E2D */
+  color: var(--primary-color); /* #A4976B */
 }
 
 footer a:hover::after {
@@ -497,85 +650,70 @@ footer a:hover::after {
 
 footer .copyright {
   font-size: 0.9rem;
-  color: var(--dark-color); /* Nu #50543B */
+  color: var(--dark-color); /* #50543B */
   padding-top: 0.5rem;
-  border-top: 1px solid rgba(80, 84, 59, 0.2); /* Opdateret til at matche #50543B */
+  border-top: 1px solid rgba(80, 84, 59, 0.2); /* Matches #50543B */
 }
 
 /* Responsivitet */
 @media (max-width: 1024px) {
-  .find-section .locations-map {
-      flex-direction: column;
-  }
-
-  .find-section .map {
-      max-width: 100%;
-  }
-
   .hero {
-      height: 400px;
+    height: 400px;
   }
 
   .grid-section {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    gap: 1rem; /* Reduce gap for smaller screens */
+  }
+
+  .logo img {
+    height: 25px; /* Slightly smaller logo */
+    margin-left: 0.5rem;
   }
 }
 
 @media (max-width: 768px) {
   h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   h2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .hero h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .hero p {
-      font-size: 1rem;
-  }
-
-  .welcome-section h1 {
-      font-size: 2rem;
-  }
-
-  .welcome-section p {
-      font-size: 1rem;
-  }
-
-  .find-section h1 {
-      font-size: 2rem;
-  }
-
-  .find-section p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .tilmeld-container {
-      justify-content: center; /* Already centered on mobile */
+    justify-content: center;
   }
 
   .policy-section h1 {
-      font-size: 2rem; /* Match global h1 */
+    font-size: 2rem;
   }
 
   .policy-section h2 {
-      font-size: 1.5rem; /* Match global h2 */
+    font-size: 1.5rem;
   }
 
   .policy-section p {
-      font-size: 1rem; /* Match global p */
+    font-size: 1rem;
   }
 
   footer .links a {
-      display: inline-block;
-      margin: 0.3rem 0.5rem;
+    display: inline-block;
+    margin: 0.3rem 0.5rem;
   }
 }
