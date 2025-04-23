@@ -568,7 +568,11 @@ button:hover, .btn:hover {
 }
 
 .find-section .location .btn-find:hover {
-  background-color: rgba(241, 233, 222, 0.1); /* Slight white tint */
+  
+    background-color: #F1E9DE !important;
+    color: #8a5E2D !important;
+    border-color: #8a5E2D !important;
+
 }
 
 .find-section .location .learn-more {
