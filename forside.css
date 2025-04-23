@@ -199,7 +199,8 @@
         gap: 20px;
     }
 
-    /* Section 2 */
+    /* Media Queries for Section 2 */
+@media (max-width: 1024px) {
     .section2 {
         min-height: auto; /* Fleksibel højde */
         padding: 40px 20px;
@@ -216,9 +217,40 @@
         text-align: center;
     }
 
-    .section2-image img {
-        width: 300px; /* Reducer billedstørrelse */
+    .section2-image {
+        justify-content: center; /* Center image in column layout */
+        margin-left: 0; /* Remove right alignment */
+        width: 100%; /* Full width for centering */
     }
+
+    section2-image img {
+        width: 90%; /* Larger image for prominence */
+        max-width: 400px; /* Allow larger size */
+        margin: 0 auto; /* Center horizontally */
+    }
+}
+
+@media (max-width: 768px) {
+    .section2 {
+        padding: 30px 15px;
+    }
+
+    .section2-image img {
+        width: 95%; /* Almost full width for narrow screens */
+        max-width: 350px; /* Slightly smaller cap */
+    }
+}
+
+@media (max-width: 480px) {
+    .section2 {
+        padding: 20px 10px;
+    }
+
+    .section2-image img {
+        width: 100%; /* Full width for very narrow screens */
+        max-width: 300px; /* Cap to prevent oversized images */
+    }
+}
 
     /* Section 3 */
     .section3 {
