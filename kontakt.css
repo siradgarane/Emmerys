@@ -64,45 +64,39 @@
 
 }
 
-/* generel style for kontakt*/
-
+/* Generel stil for kontakt */
 .contact-section {
-    display: flex; 
-    flex-direction: row;;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     border-radius: 10px;
     background-color: #f2eae3;
-    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-
-    max-width: 1024px; 
+    max-width: 1024px;
     min-height: 450px;
     margin: 0 auto 4rem;
     gap: 2rem;
-    align-items: stretch; /* Ensures all items stretch to the same height */
- 
+    align-items: stretch;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 20px; /* padding around the text */
-    margin-right: 30px;;
- 
+    padding: 20px;
+    min-width: 200px; /* Reduceret for bedre skalering */
 }
 
 .information {
     flex: 1;
     min-width: 150px;
     margin: 10px;
- 
 }
 
 .contact-image {
     flex: 1;
-    min-width: 400px;
+    min-width: 300px; /* Reduceret fra 400px for bedre mobilkompatibilitet */
     height: auto;
 }
 
@@ -110,29 +104,36 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block
+    display: block;
 }
 
-
+/* Media query for mindre skærme */
 @media (max-width: 768px) {
     .contact-section {
-      flex-direction: column;
-      max-height: 200vh; /* Juster højden for mobilvisning */
+        flex-direction: column;
+        min-height: auto; /* Fjern max-height for dynamisk højde */
+        gap: 1rem; /* Reduceret gap for mindre skærme */
     }
-  
+
     .contact-info,
     .contact-image {
-      width: 100%;
-      min-height: auto;
+        width: 100%;
+        min-width: 0; /* Fjern min-width for fuld responsivitet */
+        margin: 0; /* Fjern margin for at undgå overlap */
     }
-  
+
     .contact-info {
-      padding: 2rem;
-      text-align: center;
+        padding: 1.5rem;
+        text-align: center;
     }
-  
+
     .contact-image img {
-      height: 250px; /* Begrænset højde på mobil så det ikke fylder for meget */
-      object-fit: cover;
+        height: 200px; /* Justeret højde for bedre proportioner */
+        object-fit: cover;
     }
-  }
+
+    /* Sørg for, at containeren ikke overstiger skærmbredden */
+    .kontakt {
+        padding: 30px 15px; /* Reducer padding på mobil */
+    }
+}
